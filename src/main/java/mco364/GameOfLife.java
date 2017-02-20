@@ -26,7 +26,7 @@ public class GameOfLife {
     public GameOfLife(Board board, int size, Pattern shape) {
         this.board = board;
         this.size = size;
-        aliveCells = new ArrayList<Cell>();
+        aliveCells = Collections.synchronizedList(new ArrayList<Cell>());
         pattern = shape;
     }
     
